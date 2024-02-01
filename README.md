@@ -19,7 +19,7 @@ python -m pip install git+https://github.com/Valdes-Tresanco-MS/AutoDockTools_py
 
 # Datasets
 
-1. Download the processed dataset form this [link](https://bits.csb.pitt.edu/files/crossdock2020/).
+1. Download the processed dataset form this [link]().
 
 2. Download CrossDocked2020 v1.1 from [here](https://bits.csb.pitt.edu/files/crossdock2020/), If you want to process the dataset from scratch. Run data_process to process the data.
 
@@ -60,7 +60,4 @@ python evaluation/evaluate_amc_diff.py
 python evaluation/evaluate_for_pdb.py
 ```
 
-# Hadoop
-# AMC-Diff
-# AMC-Diff
-# AMC-Diff
+
