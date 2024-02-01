@@ -1,0 +1,399 @@
+7s15
+  PyMOL2.5          3D                             0
+
+ 43 48  0  0  0  0  0  0  0  0999 V2000
+   70.3400   65.2420   63.4580 C   0  0  0  0  0  0  0  0  0  0  0  0
+   69.2810   64.9910   62.4290 C   0  0  0  0  0  0  0  0  0  0  0  0
+   69.5700   65.7080   61.1760 N   0  0  0  0  0  0  0  0  0  0  0  0
+   70.4810   65.3780   60.2300 C   0  0  0  0  0  0  0  0  0  0  0  0
+   70.4970   66.2220   59.2260 N   0  0  0  0  0  0  0  0  0  0  0  0
+   69.5370   67.1590   59.5350 C   0  0  0  0  0  0  0  0  0  0  0  0
+   68.9530   66.8660   60.7340 C   0  0  0  0  0  0  0  0  0  0  0  0
+   67.8870   67.6680   61.4140 C   0  0  0  0  0  0  0  0  0  0  0  0
+   68.1200   67.8650   62.8370 N   0  0  0  0  0  0  0  0  0  0  0  0
+   67.2670   67.4560   63.8470 C   0  0  0  0  0  0  0  0  0  0  0  0
+   66.0440   66.8070   63.8350 C   0  0  0  0  0  0  0  0  0  0  0  0
+   65.4470   66.5070   65.0590 C   0  0  0  0  0  0  0  0  0  0  0  0
+   66.0820   66.8560   66.2530 C   0  0  0  0  0  0  0  0  0  0  0  0
+   67.2990   67.5130   66.2490 C   0  0  0  0  0  0  0  0  0  0  0  0
+   67.8960   67.8170   65.0310 C   0  0  0  0  0  0  0  0  0  0  0  0
+   69.1080   68.4450   64.7600 N   0  0  0  0  0  0  0  0  0  0  0  0
+   69.2020   68.4470   63.4500 C   0  0  0  0  0  0  0  0  0  0  0  0
+   70.3880   68.9700   62.7130 C   0  0  0  0  0  0  0  0  0  0  0  0
+   70.0880   70.0800   61.8130 N   0  0  0  0  0  0  0  0  0  0  0  0
+   71.1020   70.1650   60.7640 C   0  0  0  0  0  0  0  0  0  0  0  0
+   70.7610   71.2540   59.7640 C   0  0  0  0  0  0  0  0  0  0  0  0
+   70.6620   72.6100   60.4550 C   0  0  0  0  0  0  0  0  0  0  0  0
+   69.6770   72.5030   61.6160 C   0  0  0  0  0  0  0  0  0  0  0  0
+   70.0530   71.3510   62.5410 C   0  0  0  0  0  0  0  0  0  0  0  0
+   70.2320   73.6480   59.4500 C   0  0  0  0  0  0  0  0  0  0  0  0
+   68.9950   74.2540   59.5050 C   0  0  0  0  0  0  0  0  0  0  0  0
+   68.6200   75.0920   58.4740 C   0  0  0  0  0  0  0  0  0  0  0  0
+   69.4820   75.3100   57.4170 C   0  0  0  0  0  0  0  0  0  0  0  0
+   70.7110   74.6670   57.4640 C   0  0  0  0  0  0  0  0  0  0  0  0
+   71.0950   73.8660   58.4480 N   0  0  0  0  0  0  0  0  0  0  0  0
+   71.5270   74.8670   56.4000 O   0  0  0  0  0  0  0  0  0  0  0  0
+   72.8110   74.2350   56.4280 C   0  0  0  0  0  0  0  0  0  0  0  0
+   72.7010   72.7430   56.2820 C   0  0  0  0  0  0  0  0  0  0  0  0
+   72.6660   72.1820   55.0100 C   0  0  0  0  0  0  0  0  0  0  0  0
+   73.0970   70.8890   54.7790 C   0  0  0  0  0  0  0  0  0  0  0  0
+   73.5610   70.1660   55.8370 C   0  0  0  0  0  0  0  0  0  0  0  0
+   73.6180   70.6580   57.1130 C   0  0  0  0  0  0  0  0  0  0  0  0
+   73.1830   71.9440   57.2960 C   0  0  0  0  0  0  0  0  0  0  0  0
+   64.1300   65.8210   65.0900 C   0  0  0  0  0  0  0  0  0  0  0  0
+   63.5660   65.5620   66.1430 O   0  0  0  0  0  0  0  0  0  0  0  0
+   63.6300   65.5400   63.9200 O   0  0  0  0  0  0  0  0  0  0  0  0
+   73.2420   72.4740   58.5360 F   0  0  0  0  0  0  0  0  0  0  0  0
+   73.9900   68.8960   55.6170 F   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  4  0  0  0  0
+  3  7  4  0  0  0  0
+  4  5  4  0  0  0  0
+  5  6  4  0  0  0  0
+  6  7  4  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  4  0  0  0  0
+ 10 11  4  0  0  0  0
+ 10 15  4  0  0  0  0
+ 11 12  4  0  0  0  0
+ 12 39  1  0  0  0  0
+ 12 13  4  0  0  0  0
+ 13 14  4  0  0  0  0
+ 14 15  4  0  0  0  0
+ 15 16  4  0  0  0  0
+  9 17  4  0  0  0  0
+ 16 17  4  0  0  0  0
+ 17 18  1  0  0  0  0
+ 18 19  1  0  0  0  0
+ 19 20  1  0  0  0  0
+ 20 21  1  0  0  0  0
+ 21 22  1  0  0  0  0
+ 22 23  1  0  0  0  0
+ 22 25  1  0  0  0  0
+ 23 24  1  0  0  0  0
+ 19 24  1  0  0  0  0
+ 25 30  4  0  0  0  0
+ 25 26  4  0  0  0  0
+ 26 27  4  0  0  0  0
+ 27 28  4  0  0  0  0
+ 28 29  4  0  0  0  0
+ 29 30  4  0  0  0  0
+ 29 31  1  0  0  0  0
+ 31 32  1  0  0  0  0
+ 32 33  1  0  0  0  0
+ 33 34  1  0  0  0  0
+ 33 38  1  0  0  0  0
+ 34 35  1  0  0  0  0
+ 35 36  1  0  0  0  0
+ 36 37  1  0  0  0  0
+ 36 43  1  0  0  0  0
+ 37 38  1  0  0  0  0
+ 38 42  1  0  0  0  0
+ 39 40  4  0  0  0  0
+ 39 41  4  0  0  0  0
+M  END
+>  <pdb_header>
+HEADER    MEMBRANE PROTEIN                        01-SEP-21   7S15              
+TITLE     GLP-1 RECEPTOR BOUND WITH PFIZER SMALL MOLECULE AGONIST               
+COMPND    MOL_ID: 1;                                                            
+COMPND   2 MOLECULE: GLUCAGON-LIKE PEPTIDE 1 RECEPTOR;                          
+COMPND   3 CHAIN: R;                                                            
+COMPND   4 SYNONYM: GLP-1 RECEPTOR,GLP-1-R,GLP-1R;                              
+COMPND   5 ENGINEERED: YES;                                                     
+COMPND   6 MUTATION: YES                                                        
+SOURCE    MOL_ID: 1;                                                            
+SOURCE   2 ORGANISM_SCIENTIFIC: HOMO SAPIENS;                                   
+SOURCE   3 ORGANISM_COMMON: HUMAN;                                              
+SOURCE   4 ORGANISM_TAXID: 9606;                                                
+SOURCE   5 GENE: GLP1R;                                                         
+SOURCE   6 EXPRESSION_SYSTEM: SPODOPTERA FRUGIPERDA;                            
+SOURCE   7 EXPRESSION_SYSTEM_TAXID: 7108                                        
+KEYWDS    GLP-1R, GPCR, MEMBRANE PROTEIN                                        
+EXPDTA    ELECTRON MICROSCOPY                                                   
+AUTHOR    Y.LIU,J.M.DIAS,S.HAN                                                  
+REVDAT   3   06-JUL-22 7S15    1       JRNL                                     
+REVDAT   2   15-JUN-22 7S15    1       JRNL                                     
+REVDAT   1   08-JUN-22 7S15    0                                                
+JRNL        AUTH   D.A.GRIFFITH,D.J.EDMONDS,J.P.FORTIN,A.S.KALGUTKAR,           
+JRNL        AUTH 2 J.B.KUZMISKI,P.M.LORIA,A.R.SAXENA,S.W.BAGLEY,C.BUCKERIDGE,   
+JRNL        AUTH 3 J.M.CURTO,D.R.DERKSEN,J.M.DIAS,M.C.GRIFFOR,S.HAN,            
+JRNL        AUTH 4 V.M.JACKSON,M.S.LANDIS,D.LETTIERE,C.LIMBERAKIS,Y.LIU,        
+JRNL        AUTH 5 A.M.MATHIOWETZ,J.C.PATEL,D.W.PIOTROWSKI,D.A.PRICE,           
+JRNL        AUTH 6 R.B.RUGGERI,D.A.TESS                                         
+JRNL        TITL   A SMALL-MOLECULE ORAL AGONIST OF THE HUMAN GLUCAGON-LIKE     
+JRNL        TITL 2 PEPTIDE-1 RECEPTOR.                                          
+JRNL        REF    J.MED.CHEM.                   V.  65  8208 2022              
+JRNL        REFN                   ISSN 0022-2623                               
+JRNL        PMID   35647711                                                     
+JRNL        DOI    10.1021/ACS.JMEDCHEM.1C01856                                 
+REMARK   2                                                                      
+REMARK   2 RESOLUTION.    3.80 ANGSTROMS.                                       
+REMARK   3                                                                      
+REMARK   3 REFINEMENT.                                                          
+REMARK   3   SOFTWARE PACKAGES      : GAUTOMATCH, SERIALEM, GCTF, COOT,         
+REMARK   3                            RELION, RELION, RELION, RELION, PHENIX    
+REMARK   3   RECONSTRUCTION SCHEMA  : BACK PROJECTION                           
+REMARK   3                                                                      
+REMARK   3 EM MAP-MODEL FITTING AND REFINEMENT                                  
+REMARK   3   PDB ENTRY                    : 6B3J                                
+REMARK   3   REFINEMENT SPACE             : NULL                                
+REMARK   3   REFINEMENT PROTOCOL          : RIGID BODY FIT                      
+REMARK   3   REFINEMENT TARGET            : NULL                                
+REMARK   3   OVERALL ANISOTROPIC B VALUE  : NULL                                
+REMARK   3                                                                      
+REMARK   3 FITTING PROCEDURE : NULL                                             
+REMARK   3                                                                      
+REMARK   3 EM IMAGE RECONSTRUCTION STATISTICS                                   
+REMARK   3   NOMINAL PIXEL SIZE (ANGSTROMS)    : NULL                           
+REMARK   3   ACTUAL PIXEL SIZE  (ANGSTROMS)    : NULL                           
+REMARK   3   EFFECTIVE RESOLUTION (ANGSTROMS)  : 3.800                          
+REMARK   3   NUMBER OF PARTICLES               : 120000                         
+REMARK   3   CTF CORRECTION METHOD             : PHASE FLIPPING AND AMPLITUDE   
+REMARK   3                                       CORRECTION                     
+REMARK   3                                                                      
+REMARK   3 EM RECONSTRUCTION MAGNIFICATION CALIBRATION: NULL                    
+REMARK   3                                                                      
+REMARK   3 OTHER DETAILS: NULL                                                  
+REMARK   4                                                                      
+REMARK   4 7S15 COMPLIES WITH FORMAT V. 3.30, 13-JUL-11                         
+REMARK 100                                                                      
+REMARK 100 THIS ENTRY HAS BEEN PROCESSED BY RCSB ON 03-SEP-21.                  
+REMARK 100 THE DEPOSITION ID IS D_1000257997.                                   
+REMARK 245                                                                      
+REMARK 245 EXPERIMENTAL DETAILS                                                 
+REMARK 245   RECONSTRUCTION METHOD          : SINGLE PARTICLE                   
+REMARK 245   SPECIMEN TYPE                  : NULL                              
+REMARK 245                                                                      
+REMARK 245 ELECTRON MICROSCOPE SAMPLE                                           
+REMARK 245   SAMPLE TYPE                    : PARTICLE                          
+REMARK 245   PARTICLE TYPE                  : POINT                             
+REMARK 245   NAME OF SAMPLE                 : AGONIST BOUND GLP1 RECEPTOR       
+REMARK 245   SAMPLE CONCENTRATION (MG ML-1) : 0.08                              
+REMARK 245   SAMPLE SUPPORT DETAILS         : NULL                              
+REMARK 245   SAMPLE VITRIFICATION DETAILS   : -2 BLOTTING FORCE 4S BLOTTING     
+REMARK 245                                    TIME                              
+REMARK 245   SAMPLE BUFFER                  : NULL                              
+REMARK 245   PH                             : 7.50                              
+REMARK 245   SAMPLE DETAILS                 : GLP1 RECEPTOR IS STABILIZED BY    
+REMARK 245  STAR MUTATIONS                                                      
+REMARK 245                                                                      
+REMARK 245 DATA ACQUISITION                                                     
+REMARK 245   DATE OF EXPERIMENT                : NULL                           
+REMARK 245   NUMBER OF MICROGRAPHS-IMAGES      : 19000                          
+REMARK 245   TEMPERATURE (KELVIN)              : NULL                           
+REMARK 245   MICROSCOPE MODEL                  : FEI TITAN KRIOS                
+REMARK 245   DETECTOR TYPE                     : GATAN K2 SUMMIT (4K X 4K)      
+REMARK 245   MINIMUM DEFOCUS (NM)              : 1000.00                        
+REMARK 245   MAXIMUM DEFOCUS (NM)              : NULL                           
+REMARK 245   MINIMUM TILT ANGLE (DEGREES)      : NULL                           
+REMARK 245   MAXIMUM TILT ANGLE (DEGREES)      : NULL                           
+REMARK 245   NOMINAL CS                        : 2.70                           
+REMARK 245   IMAGING MODE                      : BRIGHT FIELD                   
+REMARK 245   ELECTRON DOSE (ELECTRONS NM**-2)  : 200.00                         
+REMARK 245   ILLUMINATION MODE                 : FLOOD BEAM                     
+REMARK 245   NOMINAL MAGNIFICATION             : 29000                          
+REMARK 245   CALIBRATED MAGNIFICATION          : NULL                           
+REMARK 245   SOURCE                            : FIELD EMISSION GUN             
+REMARK 245   ACCELERATION VOLTAGE (KV)         : 300                            
+REMARK 245   IMAGING DETAILS                   : NULL                           
+REMARK 247                                                                      
+REMARK 247 ELECTRON MICROSCOPY                                                  
+REMARK 247  THE COORDINATES IN THIS ENTRY WERE GENERATED FROM ELECTRON          
+REMARK 247  MICROSCOPY DATA. PROTEIN DATA BANK CONVENTIONS REQUIRE              
+REMARK 247  THAT CRYST1 AND SCALE RECORDS BE INCLUDED, BUT THE VALUES           
+REMARK 247  ON THESE RECORDS ARE MEANINGLESS EXCEPT FOR THE CALCULATION         
+REMARK 247  OF THE STRUCTURE FACTORS.                                           
+REMARK 300                                                                      
+REMARK 300 BIOMOLECULE: 1                                                       
+REMARK 300 SEE REMARK 350 FOR THE AUTHOR PROVIDED AND/OR PROGRAM                
+REMARK 300 GENERATED ASSEMBLY INFORMATION FOR THE STRUCTURE IN                  
+REMARK 300 THIS ENTRY. THE REMARK MAY ALSO PROVIDE INFORMATION ON               
+REMARK 300 BURIED SURFACE AREA.                                                 
+REMARK 350                                                                      
+REMARK 350 COORDINATES FOR A COMPLETE MULTIMER REPRESENTING THE KNOWN           
+REMARK 350 BIOLOGICALLY SIGNIFICANT OLIGOMERIZATION STATE OF THE                
+REMARK 350 MOLECULE CAN BE GENERATED BY APPLYING BIOMT TRANSFORMATIONS          
+REMARK 350 GIVEN BELOW.  BOTH NON-CRYSTALLOGRAPHIC AND                          
+REMARK 350 CRYSTALLOGRAPHIC OPERATIONS ARE GIVEN.                               
+REMARK 350                                                                      
+REMARK 350 BIOMOLECULE: 1                                                       
+REMARK 350 AUTHOR DETERMINED BIOLOGICAL UNIT: MONOMERIC                         
+REMARK 350 SOFTWARE DETERMINED QUATERNARY STRUCTURE: MONOMERIC                  
+REMARK 350 SOFTWARE USED: PISA                                                  
+REMARK 350 TOTAL BURIED SURFACE AREA: 0 ANGSTROM**2                             
+REMARK 350 SURFACE AREA OF THE COMPLEX: 23210 ANGSTROM**2                       
+REMARK 350 CHANGE IN SOLVENT FREE ENERGY: 0.0 KCAL/MOL                          
+REMARK 350 APPLY THE FOLLOWING TO CHAINS: R                                     
+REMARK 350   BIOMT1   1  1.000000  0.000000  0.000000        0.00000            
+REMARK 350   BIOMT2   1  0.000000  1.000000  0.000000        0.00000            
+REMARK 350   BIOMT3   1  0.000000  0.000000  1.000000        0.00000            
+REMARK 465                                                                      
+REMARK 465 MISSING RESIDUES                                                     
+REMARK 465 THE FOLLOWING RESIDUES WERE NOT LOCATED IN THE                       
+REMARK 465 EXPERIMENT. (M=MODEL NUMBER; RES=RESIDUE NAME; C=CHAIN               
+REMARK 465 IDENTIFIER; SSSEQ=SEQUENCE NUMBER; I=INSERTION CODE.)                
+REMARK 465                                                                      
+REMARK 465   M RES C SSSEQI                                                     
+REMARK 465     ARG R    24                                                      
+REMARK 465     PRO R    25                                                      
+REMARK 465     GLN R    26                                                      
+REMARK 465     GLY R    27                                                      
+REMARK 465     ALA R    28                                                      
+REMARK 465     THR R    29                                                      
+REMARK 465     SER R   129                                                      
+REMARK 465     LYS R   130                                                      
+REMARK 465     ARG R   131                                                      
+REMARK 465     GLY R   132                                                      
+REMARK 465     GLU R   133                                                      
+REMARK 465     ARG R   134                                                      
+REMARK 465     GLU R   339                                                      
+REMARK 465     MET R   340                                                      
+REMARK 465     CYS R   341                                                      
+REMARK 465     LYS R   342                                                      
+REMARK 465     LEU R   422                                                      
+REMARK 500                                                                      
+REMARK 500 GEOMETRY AND STEREOCHEMISTRY                                         
+REMARK 500 SUBTOPIC: CLOSE CONTACTS IN SAME ASYMMETRIC UNIT                     
+REMARK 500                                                                      
+REMARK 500 THE FOLLOWING ATOMS ARE IN CLOSE CONTACT.                            
+REMARK 500                                                                      
+REMARK 500  ATM1  RES C  SSEQI   ATM2  RES C  SSEQI           DISTANCE          
+REMARK 500   OH   TYR R   241     OE2  GLU R   364              2.17            
+REMARK 500                                                                      
+REMARK 500 REMARK: NULL                                                         
+REMARK 500                                                                      
+REMARK 500 GEOMETRY AND STEREOCHEMISTRY                                         
+REMARK 500 SUBTOPIC: COVALENT BOND ANGLES                                       
+REMARK 500                                                                      
+REMARK 500 THE STEREOCHEMICAL PARAMETERS OF THE FOLLOWING RESIDUES              
+REMARK 500 HAVE VALUES WHICH DEVIATE FROM EXPECTED VALUES BY MORE               
+REMARK 500 THAN 6*RMSD (M=MODEL NUMBER; RES=RESIDUE NAME; C=CHAIN               
+REMARK 500 IDENTIFIER; SSEQ=SEQUENCE NUMBER; I=INSERTION CODE).                 
+REMARK 500                                                                      
+REMARK 500 STANDARD TABLE:                                                      
+REMARK 500 FORMAT: (10X,I3,1X,A3,1X,A1,I4,A1,3(1X,A4,2X),12X,F5.1)              
+REMARK 500                                                                      
+REMARK 500 EXPECTED VALUES PROTEIN: ENGH AND HUBER, 1999                        
+REMARK 500 EXPECTED VALUES NUCLEIC ACID: CLOWNEY ET AL 1996                     
+REMARK 500                                                                      
+REMARK 500  M RES CSSEQI ATM1   ATM2   ATM3                                     
+REMARK 500    CYS R 126   CA  -  CB  -  SG  ANGL. DEV. =   7.7 DEGREES          
+REMARK 500                                                                      
+REMARK 500 REMARK: NULL                                                         
+REMARK 500                                                                      
+REMARK 500 GEOMETRY AND STEREOCHEMISTRY                                         
+REMARK 500 SUBTOPIC: TORSION ANGLES                                             
+REMARK 500                                                                      
+REMARK 500 TORSION ANGLES OUTSIDE THE EXPECTED RAMACHANDRAN REGIONS:            
+REMARK 500 (M=MODEL NUMBER; RES=RESIDUE NAME; C=CHAIN IDENTIFIER;               
+REMARK 500 SSEQ=SEQUENCE NUMBER; I=INSERTION CODE).                             
+REMARK 500                                                                      
+REMARK 500 STANDARD TABLE:                                                      
+REMARK 500 FORMAT:(10X,I3,1X,A3,1X,A1,I4,A1,4X,F7.2,3X,F7.2)                    
+REMARK 500                                                                      
+REMARK 500 EXPECTED VALUES: GJ KLEYWEGT AND TA JONES (1996). PHI/PSI-           
+REMARK 500 CHOLOGY: RAMACHANDRAN REVISITED. STRUCTURE 4, 1395 - 1400            
+REMARK 500                                                                      
+REMARK 500  M RES CSSEQI        PSI       PHI                                   
+REMARK 500    ALA R  57      -60.37    -94.51                                   
+REMARK 500    GLU R  68       -2.26     65.09                                   
+REMARK 500    PRO R  77     -177.68    -69.80                                   
+REMARK 500    GLN R  97       37.17    -99.37                                   
+REMARK 500    ASN R 115       -3.65     75.58                                   
+REMARK 500    LEU R 123       13.55   -141.41                                   
+REMARK 500    CYS R 126       37.34    -99.24                                   
+REMARK 500    GLU R 138       14.61   -140.76                                   
+REMARK 500    HIS R 171        9.55     57.55                                   
+REMARK 500    SER R 223        9.51    -69.87                                   
+REMARK 500    SER R 258       -3.86     69.07                                   
+REMARK 500    GLN R 263       -8.32    -56.06                                   
+REMARK 500    ASP R 293     -162.69    -79.15                                   
+REMARK 500    THR R 298       42.07     36.86                                   
+REMARK 500    ASN R 300      141.40   -172.73                                   
+REMARK 500    MET R 303       12.75   -141.92                                   
+REMARK 500    TRP R 306       34.84    -99.60                                   
+REMARK 500    ILE R 345      -62.13   -102.38                                   
+REMARK 500    HIS R 374        5.43    -69.29                                   
+REMARK 500    CYS R 403       -2.23   -140.92                                   
+REMARK 500                                                                      
+REMARK 500 REMARK: NULL                                                         
+REMARK 900                                                                      
+REMARK 900 RELATED ENTRIES                                                      
+REMARK 900 RELATED ID: EMD-24794   RELATED DB: EMDB                             
+REMARK 900 GLP-1 RECEPTOR BOUND WITH PFIZER SMALL MOLECULE AGONIST              
+DBREF  7S15 R   24   422  UNP    P43220   GLP1R_HUMAN     24    422             
+SEQADV 7S15 TYR R  146  UNP  P43220    ILE   146 ENGINEERED MUTATION            
+SEQADV 7S15 ARG R  208  UNP  P43220    ALA   208 ENGINEERED MUTATION            
+SEQADV 7S15 GLU R  213  UNP  P43220    GLN   213 ENGINEERED MUTATION            
+SEQADV 7S15 ARG R  219  UNP  P43220    SER   219 ENGINEERED MUTATION            
+SEQADV 7S15 ALA R  260  UNP  P43220    LEU   260 ENGINEERED MUTATION            
+SEQADV 7S15 ALA R  291  UNP  P43220    TYR   291 ENGINEERED MUTATION            
+SEQADV 7S15 GLU R  339  UNP  P43220    LEU   339 ENGINEERED MUTATION            
+SEQADV 7S15 GLN R  346  UNP  P43220    LYS   346 ENGINEERED MUTATION            
+SEQRES   1 R  399  ARG PRO GLN GLY ALA THR VAL SER LEU TRP GLU THR VAL          
+SEQRES   2 R  399  GLN LYS TRP ARG GLU TYR ARG ARG GLN CYS GLN ARG SER          
+SEQRES   3 R  399  LEU THR GLU ASP PRO PRO PRO ALA THR ASP LEU PHE CYS          
+SEQRES   4 R  399  ASN ARG THR PHE ASP GLU TYR ALA CYS TRP PRO ASP GLY          
+SEQRES   5 R  399  GLU PRO GLY SER PHE VAL ASN VAL SER CYS PRO TRP TYR          
+SEQRES   6 R  399  LEU PRO TRP ALA SER SER VAL PRO GLN GLY HIS VAL TYR          
+SEQRES   7 R  399  ARG PHE CYS THR ALA GLU GLY LEU TRP LEU GLN LYS ASP          
+SEQRES   8 R  399  ASN SER SER LEU PRO TRP ARG ASP LEU SER GLU CYS GLU          
+SEQRES   9 R  399  GLU SER LYS ARG GLY GLU ARG SER SER PRO GLU GLU GLN          
+SEQRES  10 R  399  LEU LEU PHE LEU TYR TYR ILE TYR THR VAL GLY TYR ALA          
+SEQRES  11 R  399  LEU SER PHE SER ALA LEU VAL ILE ALA SER ALA ILE LEU          
+SEQRES  12 R  399  LEU GLY PHE ARG HIS LEU HIS CYS THR ARG ASN TYR ILE          
+SEQRES  13 R  399  HIS LEU ASN LEU PHE ALA SER PHE ILE LEU ARG ALA LEU          
+SEQRES  14 R  399  SER VAL PHE ILE LYS ASP ALA ALA LEU LYS TRP MET TYR          
+SEQRES  15 R  399  SER THR ARG ALA GLN GLN HIS GLU TRP ASP GLY LEU LEU          
+SEQRES  16 R  399  ARG TYR GLN ASP SER LEU SER CYS ARG LEU VAL PHE LEU          
+SEQRES  17 R  399  LEU MET GLN TYR CYS VAL ALA ALA ASN TYR TYR TRP LEU          
+SEQRES  18 R  399  LEU VAL GLU GLY VAL TYR LEU TYR THR LEU LEU ALA PHE          
+SEQRES  19 R  399  SER VAL ALA SER GLU GLN TRP ILE PHE ARG LEU TYR VAL          
+SEQRES  20 R  399  SER ILE GLY TRP GLY VAL PRO LEU LEU PHE VAL VAL PRO          
+SEQRES  21 R  399  TRP GLY ILE VAL LYS TYR LEU ALA GLU ASP GLU GLY CYS          
+SEQRES  22 R  399  TRP THR ARG ASN SER ASN MET ASN TYR TRP LEU ILE ILE          
+SEQRES  23 R  399  ARG LEU PRO ILE LEU PHE ALA ILE GLY VAL ASN PHE LEU          
+SEQRES  24 R  399  ILE PHE VAL ARG VAL ILE CYS ILE VAL VAL SER LYS LEU          
+SEQRES  25 R  399  LYS ALA ASN GLU MET CYS LYS THR ASP ILE GLN CYS ARG          
+SEQRES  26 R  399  LEU ALA LYS SER THR LEU THR LEU ILE PRO LEU LEU GLY          
+SEQRES  27 R  399  THR HIS GLU VAL ILE PHE ALA PHE VAL MET ASP GLU HIS          
+SEQRES  28 R  399  ALA ARG GLY THR LEU ARG PHE ILE LYS LEU PHE THR GLU          
+SEQRES  29 R  399  LEU SER PHE THR SER PHE GLN GLY LEU MET VAL ALA ILE          
+SEQRES  30 R  399  LEU TYR CYS PHE VAL ASN ASN GLU VAL GLN LEU GLU PHE          
+SEQRES  31 R  399  ARG LYS SER TRP GLU ARG TRP ARG LEU                          
+HET    82L  R 501      43                                                       
+HETNAM     82L 2-[(4-{6-[(2,4-DIFLUOROPHENYL)METHOXY]PYRIDIN-2-                 
+HETNAM   2 82L  YL}PIPERIDIN-1-YL)METHYL]-1-[(1-ETHYL-1H-IMIDAZOL-5-            
+HETNAM   3 82L  YL)METHYL]-1H-BENZIMIDAZOLE-6-CARBOXYLIC ACID                   
+FORMUL   2  82L    C32 H32 F2 N6 O3                                             
+HELIX    1 AA1 SER R   31  GLU R   52  1                                  22    
+HELIX    2 AA2 TRP R   91  VAL R   95  5                                   5    
+HELIX    3 AA3 GLU R  138  LEU R  166  1                                  29    
+HELIX    4 AA4 CYS R  174  LYS R  202  1                                  29    
+HELIX    5 AA5 TRP R  214  GLN R  221  1                                   8    
+HELIX    6 AA6 SER R  225  LEU R  254  1                                  30    
+HELIX    7 AA7 GLN R  263  VAL R  276  1                                  14    
+HELIX    8 AA8 PRO R  277  PHE R  280  5                                   4    
+HELIX    9 AA9 VAL R  281  GLU R  292  1                                  12    
+HELIX   10 AB1 TRP R  306  LEU R  335  1                                  30    
+HELIX   11 AB2 ILE R  345  LEU R  360  1                                  16    
+HELIX   12 AB3 HIS R  363  MET R  371  1                                   9    
+HELIX   13 AB4 GLY R  377  PHE R  393  1                                  17    
+HELIX   14 AB5 PHE R  393  PHE R  404  1                                  12    
+HELIX   15 AB6 ASN R  406  ARG R  421  1                                  16    
+SSBOND   1 CYS R   46    CYS R   71                          1555   1555  2.04  
+SSBOND   2 CYS R   62    CYS R  104                          1555   1555  2.03  
+SSBOND   3 CYS R   85    CYS R  126                          1555   1555  2.05  
+SSBOND   4 CYS R  226    CYS R  296                          1555   1555  2.03  
+CRYST1    1.000    1.000    1.000  90.00  90.00  90.00 P 1                      
+ORIGX1      1.000000  0.000000  0.000000        0.00000                         
+ORIGX2      0.000000  1.000000  0.000000        0.00000                         
+ORIGX3      0.000000  0.000000  1.000000        0.00000                         
+SCALE1      1.000000  0.000000  0.000000        0.00000                         
+SCALE2      0.000000  1.000000  0.000000        0.00000                         
+SCALE3      0.000000  0.000000  1.000000        0.00000                         
+
+
+$$$$

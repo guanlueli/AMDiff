@@ -1,0 +1,6 @@
+2023-05-28 14:56:03,774 INFO:main.py:240:print_splash_screen:PDB2PQR v3.5.2: biomolecular structure conversion software.
+2023-05-28 14:56:03,774 INFO:main.py:242:print_splash_screen:Please cite:  Jurrus E, et al.  Improvements to the APBS biomolecular solvation software suite.  Protein Sci 27 112-128 (2018).
+2023-05-28 14:56:03,774 INFO:main.py:242:print_splash_screen:Please cite:  Dolinsky TJ, et al.  PDB2PQR: expanding and upgrading automated preparation of biomolecular structures for molecular simulations. Nucleic Acids Res 35 W522-W525 (2007).
+2023-05-28 14:56:03,774 INFO:main.py:752:main_driver:Checking and transforming input arguments.
+2023-05-28 14:56:03,776 INFO:main.py:756:main_driver:Loading topology files.
+2023-05-28 14:56:04,055 INFO:main.py:758:main_driver:Loading molecule: /raid/ligl/data1/data_ge/test_generate/ALK/3aox/3aox_ligan.pdb
