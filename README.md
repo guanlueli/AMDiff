@@ -8,7 +8,7 @@ This repository is the official implementation of Structure-Based Drug Design vi
 
 ```
 conda create --name amc_diff python=3.7.16
-conda activate amc_diff]
+conda activate amc_diff
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
 pip install torch-geometric
 conda install rdkit openbabel tensorboard pyyaml easydict python-lmdb -c conda-forge
