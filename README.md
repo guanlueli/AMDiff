@@ -19,7 +19,7 @@ python -m pip install git+https://github.com/Valdes-Tresanco-MS/AutoDockTools_py
 
 # Datasets
 
-1. Download the processed dataset form this [link]().
+1. Download the processed dataset form this [link](https://drive.google.com/file/d/1kjp3uLft4t6M62HgSAakiT7BnkQaSRvf/view?usp=sharing).
 
 2. Download CrossDocked2020 v1.1 from [here](https://bits.csb.pitt.edu/files/crossdock2020/), If you want to process the dataset from scratch. Run data_process to process the data.
 
