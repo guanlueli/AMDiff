@@ -33,7 +33,7 @@ python -m pip install git+https://github.com/Valdes-Tresanco-MS/AutoDockTools_py
 python train_amc_diff.py
 ```
 
-Download trained model checkpoint
+Download trained model checkpoint from this [link]([https://drive.google.com/file/d/1kjp3uLft4t6M62HgSAakiT7BnkQaSRvf/view?usp=sharing](https://drive.google.com/drive/folders/12Xqnm-7YDqfglkCYzdjRHdAcGlt3YYh_?usp=drive_link)).
 
 
 
