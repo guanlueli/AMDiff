@@ -1,8 +1,5 @@
 import sys
 import pandas as pd
-
-sys.path.append('/home/ligl/project/DVAE/generation')
-sys.path.append('/home/guanlueli/project/DVAE/generation')
 import rdkit
 import rdkit.Chem as Chem
 import copy
@@ -23,8 +20,7 @@ import matplotlib.cm as cm
 import matplotlib.colors as mcolors
 from glob import glob
 
-# data_path_base = '/data/guanlueli/1Data/1Data'
-data_path_base = '/raid/ligl/data1'
+data_path_base = './'
 
 def get_slots(smiles):
     mol = Chem.MolFromSmiles(smiles, sanitize=False)
