@@ -1,5 +1,5 @@
 model:
-  checkpoint: ./data/logs/train_model/checkpoints/65100.pt
+  checkpoint: ./data/logs/train_model1/checkpoints/65100.pt
 
 sample:
   seed: 100
