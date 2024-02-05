@@ -3,7 +3,9 @@ import torch_scatter
 import numpy as np
 from torch_geometric.data import Data
 from torch_geometric.loader import DataLoader
-
+from utils.data import PDBProtein, parse_sdf_file
+from datasets.mol_tree import Vocab, MolTree
+from rdkit import Chem
 FOLLOW_BATCH = ('protein_element', 'ligand_element', 'ligand_bond_type','motif_pos')
 
 
@@ -80,3 +82,46 @@ def get_batch_connectivity_matrix(ligand_batch, ligand_bond_index, ligand_bond_t
             connectivity_matrix[s, e] = connectivity_matrix[e, s] = t
         batch_connectivity_matrix.append(connectivity_matrix)
     return batch_connectivity_matrix
+
+
+def pdb_to_pocket_data(pdb_path):
+    pocket_dict = PDBProtein(pdb_path).to_dict_atom()
+    data = ProteinLigandData.from_protein_ligand_dicts(
+        protein_dict=torchify_dict(pocket_dict),
+        ligand_dict={
+            'element': torch.empty([0, ], dtype=torch.long),
+            'pos': torch.empty([0, 3], dtype=torch.float),
+            'atom_feature': torch.empty([0, 8], dtype=torch.float),
+            'bond_index': torch.empty([2, 0], dtype=torch.long),
+            'bond_type': torch.empty([0, ], dtype=torch.long),
+        }
+    )
+
+    return  data
+
+
+def pdb_to_pocket_data_ligand(pdb_path, ligand_path, vocab, d=4):
+    pocket_dict = PDBProtein(pdb_path).to_dict_atom()
+    ligand_dict = parse_sdf_file(ligand_path)
+    data = ProteinLigandData.from_protein_ligand_dicts(
+        protein_dict=torchify_dict(pocket_dict),
+        ligand_dict=torchify_dict(ligand_dict),
+    )
+    data.protein_filename = pdb_path
+    data.ligand_filename = ligand_path
+    ligand_pos = data.ligand_pos
+    protein_pos = data.protein_pos
+    distances = torch.cdist(ligand_pos.unsqueeze(0), protein_pos.unsqueeze(0)).squeeze(0)
+    is_in_pocket = torch.any(distances < d, dim=0)
+    data.is_in_pocket = is_in_pocket
+    data.center = torch.mean(ligand_pos, dim=0).unsqueeze(dim=0)
+    mol = Chem.MolFromMolFile(ligand_path, sanitize=False)
+    mol_tree = MolTree(mol, vocab, ligand_path)
+    data.atom_vocab_array = torch.from_numpy(mol_tree.atom_vocab_array)
+    data.atom_cluster_array = torch.from_numpy(mol_tree.atom_cluster_array)
+    data.motif_pos = torch.from_numpy(mol_tree.motif_pos)
+    data.node_wid = torch.from_numpy(mol_tree.node_wid)
+    data.size_vocab = vocab.size()
+    print(is_in_pocket)
+
+    return data
