@@ -18,11 +18,6 @@ from datasets import get_dataset
 from datasets.data_load import FOLLOW_BATCH
 from models.amc_diff import hier_diff
 
-base_dir_by = '/home/ligl/project/DVAE/generation1'
-base_dir_hk = '/home/guanlueli/project/DVAE/generation1'
-log_base_dir_by =  '/raid/ligl/data1/data_ge1'
-log_base_dir_hk =  '/data/guanlueli/1Data/1Data/data_ge1'
-
 def get_auroc(y_true, y_pred, feat_mode):
     y_true = np.array(y_true)
     y_pred = np.array(y_pred)
