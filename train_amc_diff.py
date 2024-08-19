@@ -2,8 +2,6 @@ import argparse
 import os
 import shutil
 import sys
-sys.path.append('/home/ligl/project/DVAE/generation1')
-sys.path.append('/home/guanlueli/project/DVAE/generation1')
 
 import numpy as np
 import torch
