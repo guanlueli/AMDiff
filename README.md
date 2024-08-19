@@ -1,14 +1,14 @@
-# Structure-Based Drug Design via Atom-Motif Consistency
+# Hierarchical Consistency Diffusion Model for Target-Aware Molecule Generation
 
-This repository is the official implementation of Structure-Based Drug Design via Atom-Motif Consistency.
+This repository is the official implementation of Hierarchical Consistency Diffusion Model for Target-Aware Molecule Generation.
 
 # Install environment
 
 ####  install via Pip and Conda
 
 ```
-conda create --name amc_diff python=3.7.16
-conda activate amc_diff
+conda create --name AMDiff python=3.7.16
+conda activate AMDiff
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
 pip install torch-geometric
 conda install rdkit openbabel tensorboard pyyaml easydict python-lmdb -c conda-forge
