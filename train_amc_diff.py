@@ -88,7 +88,7 @@ if __name__ == '__main__':
     dataset, subsets = get_dataset(
         config=config.data,
         transform=transform,
-        version = 'final_ph1_pocket_tree_torch_float_v1'
+        version = 'final'
     )
     train_set, val_set = subsets['train'], subsets['test']
     logger.info(f'Training: {len(train_set)} Validation: {len(val_set)}')
