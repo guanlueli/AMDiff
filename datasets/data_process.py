@@ -107,8 +107,6 @@ class PocketLigandPairDataset(Dataset):
                     num_skipped += 1
                     print('Skipping (%d) %s' % (num_skipped, ligand_fn,))
                     continue
-
-
             db.close()
 
     def __len__(self):
