@@ -39,9 +39,9 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', type=str, default='/configs/train.yml')
-    parser.add_argument('--device_num', type=str, default='cuda:6')
+    parser.add_argument('--device_num', type=str, default='cuda:0')
     parser.add_argument('--logdir', type=str, default=f'/logs')
-    parser.add_argument('--tag', type=str, default='s_1_lcenter_motif_time1_vtrue100_pos_001')
+    parser.add_argument('--tag', type=str, default='model_1')
     parser.add_argument('--train_report', type=int, default=200)
     parser.add_argument('--base_dir', type=str, default=base_dir_hk)
     parser.add_argument('--log_base_dir', type=str, default=log_base_dir_hk)
