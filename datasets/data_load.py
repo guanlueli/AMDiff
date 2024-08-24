@@ -8,9 +8,7 @@ from datasets.mol_tree import Vocab, MolTree
 from rdkit import Chem
 FOLLOW_BATCH = ('protein_element', 'ligand_element', 'ligand_bond_type','motif_pos')
 
-
 class ProteinLigandData(Data):
-
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -50,7 +48,6 @@ class ProteinLigandDataLoader(DataLoader):
     ):
         super().__init__(dataset, batch_size=batch_size, shuffle=shuffle, follow_batch=follow_batch, **kwargs)
 
-
 def torchify_dict(data):
     output = {}
     for k, v in data.items():
@@ -59,7 +56,6 @@ def torchify_dict(data):
         else:
             output[k] = v
     return output
-
 
 def get_batch_connectivity_matrix(ligand_batch, ligand_bond_index, ligand_bond_type, ligand_bond_batch):
     batch_ligand_size = torch_scatter.segment_coo(
