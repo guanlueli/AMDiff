@@ -1,4 +1,4 @@
-# Hierarchical Consistency Diffusion Model for Target-Aware Molecule Generation
+# Molecule Generation For Target Protein Binding with Hierarchical Consistency Diffusion Model
 
 This repository is the official implementation of Hierarchical Consistency Diffusion Model for Target-Aware Molecule Generation.
 
