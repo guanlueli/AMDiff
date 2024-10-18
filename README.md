@@ -35,6 +35,7 @@ python train_amc_diff.py
 
 Download trained model checkpoint from this [link](https://drive.google.com/drive/folders/12Xqnm-7YDqfglkCYzdjRHdAcGlt3YYh_?usp=sharing).
 
+The experiments were conducted on a computing cluster with NVIDIA RTX 4090 GPUs, each with 24 GB of memory. The code was executed using Python with PyTorch. The total computation time for training was approximately 16 hours on NVIDIA RTX 4090 GPU. We trained for 600000 steps with batch size 4. We used the Adam optimizer with a start learning of 5.e-4. We also schedule to decay the learning rate exponentially with a factor of 0.6 and a minimum learning rate of 1e-6. The learning rate is decayed if there is no improvement for the validation loss in 10 consecutive evaluations. The model use 5973s for generating 100 valid molecules on average separately.
 
 
 # Sampling
