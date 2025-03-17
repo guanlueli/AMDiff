@@ -12,6 +12,7 @@ from torch.utils.data import Subset
 from rdkit import Chem
 from datasets.mol_tree import Vocab, MolTree
 
+data_path_base = '/data'
 
 class PocketLigandPairDataset(Dataset):
 
@@ -20,12 +21,11 @@ class PocketLigandPairDataset(Dataset):
 
         self.raw_path = raw_path.rstrip('/')
         self.index_path = os.path.join(self.raw_path, 'index.pkl')
-        self.processed_path = os.path.join(os.path.dirname(self.raw_path),
-                                           os.path.basename(self.raw_path) + f'_processed_{version}.lmdb')
+        self.processed_path =  f'/data/crossdocked_v1.1_rmsd1.0_pocket10_processed_{version}.lmdb'
 
         self.transform = transform
         self.db = None
-        self.protein_root = './data/crossdocked_v1.1_rmsd1.0_pocket10'
+        self.protein_root = f'{data_path_base}/crossdocked_v1.1_rmsd1.0_pocket10'
 
         self.keys = None
 
@@ -67,7 +67,7 @@ class PocketLigandPairDataset(Dataset):
         with open(self.index_path, 'rb') as f:
             index = pickle.load(f)
 
-        with open('./data/vocab_df_crossdock.txt', 'rb') as f:
+        with open(f'{data_path_base}/vocab_df_crossdock.txt', 'rb') as f:
             # Load the data from the file
             vocab_df = pickle.load(f)
         smile_cluster_list = vocab_df['smile_cluster'].tolist()
@@ -107,6 +107,7 @@ class PocketLigandPairDataset(Dataset):
                     num_skipped += 1
                     print('Skipping (%d) %s' % (num_skipped, ligand_fn,))
                     continue
+
             db.close()
 
     def __len__(self):

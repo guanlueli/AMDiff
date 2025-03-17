@@ -14,13 +14,10 @@ import os
 import matplotlib.pyplot as plt
 from rdkit import Chem
 # from rdkit.Chem import Draw
-import seaborn as sns
 from collections import Counter
 import matplotlib.cm as cm
 import matplotlib.colors as mcolors
 from glob import glob
-
-data_path_base = './'
 
 def get_slots(smiles):
     mol = Chem.MolFromSmiles(smiles, sanitize=False)

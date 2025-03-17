@@ -3,7 +3,7 @@ from torch.utils.data import Subset
 from .data_process import PocketLigandPairDataset
 
 
-data_path_base = './data'
+data_path_base = '/data'
 
 def get_dataset(config, version, *args, **kwargs):
     name = 'pl'

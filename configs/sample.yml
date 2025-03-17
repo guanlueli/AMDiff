@@ -1,10 +1,10 @@
 model:
-  checkpoint: ./data/logs/train_model1/checkpoints/65100.pt
+  checkpoint: /data/train_model1/checkpoints/65100.pt
 
 sample:
   seed: 100
-  num_samples: 100
-  num_steps: 1000
+  num_samples: 4 # 100
+  num_steps: 1000 # 1000
   pos_only: False
   center_pos_mode: protein
   sample_num_atoms: prior  # range

@@ -18,6 +18,9 @@ from datasets import get_dataset
 from datasets.data_load import FOLLOW_BATCH
 from models.amc_diff import hier_diff
 
+base_dir_hk = '/'
+log_base_dir_hk =  '/data'
+
 def get_auroc(y_true, y_pred, feat_mode):
     y_true = np.array(y_true)
     y_pred = np.array(y_pred)
@@ -41,7 +44,7 @@ if __name__ == '__main__':
     parser.add_argument('--config', type=str, default='/configs/train.yml')
     parser.add_argument('--device_num', type=str, default='cuda:0')
     parser.add_argument('--logdir', type=str, default=f'/logs')
-    parser.add_argument('--tag', type=str, default='model_1')
+    parser.add_argument('--tag', type=str, default='001')
     parser.add_argument('--train_report', type=int, default=200)
     parser.add_argument('--base_dir', type=str, default=base_dir_hk)
     parser.add_argument('--log_base_dir', type=str, default=log_base_dir_hk)
@@ -88,7 +91,7 @@ if __name__ == '__main__':
     dataset, subsets = get_dataset(
         config=config.data,
         transform=transform,
-        version = 'final'
+        version = 'final_ph1_pocket_tree_torch_float_v1'
     )
     train_set, val_set = subsets['train'], subsets['test']
     logger.info(f'Training: {len(train_set)} Validation: {len(val_set)}')

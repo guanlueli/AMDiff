@@ -11,7 +11,6 @@ from rdkit.Chem.rdPartialCharges import ComputeGasteigerCharges
 import os
 import matplotlib.pyplot as plt
 from rdkit import Chem
-import seaborn as sns
 from collections import Counter
 
 def get_slots(smiles):

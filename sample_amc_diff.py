@@ -2,14 +2,12 @@ import argparse
 import os
 import shutil
 import time
-
 import numpy as np
 import torch
 from torch_geometric.data import Batch
 from torch_geometric.transforms import Compose
 from torch_scatter import scatter_sum, scatter_mean
 from tqdm.auto import tqdm
-
 import utils.misc as misc
 import utils.transforms as trans
 from datasets import get_dataset
@@ -19,7 +17,7 @@ from utils.evaluation import atom_num
 from datasets.mol_tree import Vocab, MolTree
 import pickle
 
-data_path_base = './data'
+print(os.path.dirname(os.path.abspath(__file__)))
 
 def unbatch_v_traj(ligand_v_traj, n_data, ligand_cum_atoms):
     all_step_v = [[] for _ in range(n_data)]
@@ -34,6 +32,7 @@ def unbatch_v_traj(ligand_v_traj, n_data, ligand_cum_atoms):
 def sample_diffusion_ligand(model, data, num_samples, batch_size=16, device='cuda:0',
                             num_steps=None, pos_only=False, center_pos_mode='protein',
                             sample_num_atoms='prior', set_center_pos = False, set_atom_num = False, bbox_size = None):
+
     all_pred_pos, all_pred_v, all_init_ligand_pos = [], [], []
     all_pred_pos_traj, all_pred_v_traj = [], []
     all_pred_v0_traj, all_pred_vt_traj = [], []
@@ -46,6 +45,7 @@ def sample_diffusion_ligand(model, data, num_samples, batch_size=16, device='cud
     num_batch = int(np.ceil(num_samples / batch_size))
     current_i = 15
     data.ligand_ph = torch.tensor(data.ligand_ph)
+
     for i in tqdm(range(num_batch)):
         n_data = batch_size if i < num_batch - 1 else num_samples - batch_size * (num_batch - 1)
         batch = Batch.from_data_list([data.clone() for _ in range(n_data)], follow_batch=FOLLOW_BATCH).to(device)
@@ -56,10 +56,15 @@ def sample_diffusion_ligand(model, data, num_samples, batch_size=16, device='cud
                 pocket_size = atom_num.get_space_size(data.protein_pos.detach().cpu().numpy())
                 ligand_num_atoms = [atom_num.sample_atom_num(pocket_size).astype(int) for _ in range(n_data)]
                 batch_ligand = torch.repeat_interleave(torch.arange(n_data), torch.tensor(ligand_num_atoms)).to(device)
+                ligand_num_motif = [ int(num/5) for num in ligand_num_atoms]
+                batch_motif = torch.repeat_interleave(torch.arange(n_data), torch.tensor(ligand_num_motif)).to(device)
 
             elif sample_num_atoms == 'range':
                 ligand_num_atoms = list(range(current_i + 1, current_i + n_data + 1))
                 batch_ligand = torch.repeat_interleave(torch.arange(n_data), torch.tensor(ligand_num_atoms)).to(device)
+
+                ligand_num_motif = [int(num / 5) for num in ligand_num_atoms]
+                batch_motif = torch.repeat_interleave(torch.arange(n_data), torch.tensor(ligand_num_motif)).to(device)
 
             elif sample_num_atoms == 'ref':
                 batch_ligand = batch.ligand_element_batch
@@ -68,25 +73,16 @@ def sample_diffusion_ligand(model, data, num_samples, batch_size=16, device='cud
                 raise ValueError
 
             # init ligand pos
-            # pos_in_pocket = batch.protein_pos * batch.is_in_pocket.view(-1, 1)  #
+            
+            pos_in_pocket = batch.protein_pos * batch.is_in_pocket.view(-1, 1)  #
             center_pos = batch.center
             batch_center_pos = center_pos[batch_ligand]
             init_ligand_pos = batch_center_pos + torch.randn_like(batch_center_pos)
 
             # init motif pos
-            if model.config.perturb_motif_pos and model.config.perturb_motif_wid:
-                ligand_num_motif = [int(num / 5) for num in ligand_num_atoms]
-                batch_motif = torch.repeat_interleave(torch.arange(n_data), torch.tensor(ligand_num_motif)).to(device)
-            else:
-                batch_motif = batch.motif_pos_batch
-            if model.config.perturb_motif_pos:
+            batch_center_pos = center_pos[batch_motif]
+            init_motif_pos = batch_center_pos + torch.randn_like(batch_center_pos)
 
-                batch_center_pos = center_pos[batch_motif]
-                init_motif_pos = batch_center_pos + torch.randn_like(batch_center_pos)
-            else:
-                init_motif_pos = batch.motif_pos.float()
-
-            # todo ligand_ph
 
             # init ligand v
             if pos_only:
@@ -94,12 +90,9 @@ def sample_diffusion_ligand(model, data, num_samples, batch_size=16, device='cud
             else:
                 uniform_logits = torch.zeros(len(batch_ligand), model.num_classes).to(device)
                 init_ligand_v = log_sample_categorical(uniform_logits)
-                if model.config.perturb_motif_wid:
-                    uniform_logits = torch.zeros(len(batch_motif), model.num_classes_motif).to(device)
-                    init_motif_v = log_sample_categorical(uniform_logits)
-                else:
-                    init_motif_v = batch.node_wid
-                    # init_motif_v = index_to_log_onehot(init_motif_v, 520)
+
+                uniform_logits = torch.zeros(len(batch_motif), model.num_classes_motif).to(device)
+                init_motif_v = log_sample_categorical(uniform_logits)
 
             r = model.sample_diffusion(
                 protein_pos=batch.protein_pos,
@@ -127,11 +120,11 @@ def sample_diffusion_ligand(model, data, num_samples, batch_size=16, device='cud
             # unbatch pos
             ligand_cum_atoms = np.cumsum([0] + ligand_num_atoms)
             ligand_pos_array = ligand_pos.cpu().numpy().astype(np.float64)
-            all_pred_pos += [ligand_pos_array[ligand_cum_atoms[k]:ligand_cum_atoms[k + 1]] for k in
-                             range(n_data)]  # num_samples * [num_atoms_i, 3]
+            all_pred_pos += [ligand_pos_array[ligand_cum_atoms[k]:ligand_cum_atoms[k + 1]] for k in range(n_data)]  # num_samples * [num_atoms_i, 3]
 
             init_ligand_array = init_ligand_pos.cpu().numpy().astype(np.float64)
-            all_init_ligand_pos += [init_ligand_array[ligand_cum_atoms[k]:ligand_cum_atoms[k + 1]] for k in range(n_data)]
+            all_init_ligand_pos += [init_ligand_array[ligand_cum_atoms[k]:ligand_cum_atoms[k + 1]] for k in
+                             range(n_data)]
 
             all_step_pos = [[] for _ in range(n_data)]
             for p in ligand_pos_traj:  # step_i
@@ -198,11 +191,11 @@ def sample_diffusion_ligand(model, data, num_samples, batch_size=16, device='cud
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str,default='/home/guanlueli/project/DVAE/generation1/configs/sample.yml')
+    parser.add_argument('--config', type=str,default='/code/configs/sample.yml')
     parser.add_argument('-i', '--data_id', type=int, default=49)
-    parser.add_argument('--device', type=str, default='cuda:3')
-    parser.add_argument('--batch_size', type=int, default=100)
-    parser.add_argument('--result_path', type=str, default= data_path_base + '/data_ge1/outputs_pdb/100_data_4/')
+    parser.add_argument('--device', type=str, default='cuda:0')
+    parser.add_argument('--batch_size', type=int, default=4)
+    parser.add_argument('--result_path', type=str, default= '/results/')
     args = parser.parse_args()
 
     logger = misc.get_logger('sampling')
@@ -222,7 +215,8 @@ if __name__ == '__main__':
 
     logger.info(f"Training Config: {ckpt['config']}")
 
-    args.result_path =  os.path.join(os.path.dirname(args.result_path), os.path.splitext(os.path.basename(config.model.checkpoint))[0])
+    args.result_path = os.path.join(os.path.dirname(args.result_path),os.path.basename(os.path.dirname(os.path.dirname(config.model.checkpoint))))
+    
     print('result_path', args.result_path)
 
     # Transforms
@@ -231,8 +225,6 @@ if __name__ == '__main__':
     ligand_featurizer = trans.FeaturizeLigandAtom(ligand_atom_mode)
     transform = Compose([
         protein_featurizer,
-        ligand_featurizer,
-        trans.FeaturizeLigandBond(),
     ])
 
     # Load dataset
@@ -253,13 +245,13 @@ if __name__ == '__main__':
     model.load_state_dict(ckpt['model'])
     logger.info(f'Successfully load the model! {config.model.checkpoint}')
 
-    with open('/home/guanlueli/project/DVAE/generation1/data/vocab_df_crossdock.pkl', 'rb') as f:
+    with open('/data/vocab_df_crossdock.pkl', 'rb') as f:
         # Load the data from the file
         vocab_df = pickle.load(f)
     smile_cluster_list = vocab_df['smile_cluster'].tolist()
     vocab = Vocab(smile_cluster_list)
 
-    for i in tqdm(range(0,100)):
+    for i in tqdm(range(0,10)):
         args.data_id = i
         data = test_set[args.data_id]
         data.center = torch.mean(data.ligand_pos, dim=0).unsqueeze(dim=0)
