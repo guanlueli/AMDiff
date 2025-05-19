@@ -8,7 +8,7 @@ import utils.misc as misc
 import utils.transforms as trans
 from datasets.data_load import ProteinLigandData, torchify_dict
 from models.amc_diff import hier_diff, log_sample_categorical, index_to_log_onehot
-from scripts.sample_diffusion_full_m import sample_diffusion_ligand
+from sample_amc_diff import sample_diffusion_ligand
 from utils.data import PDBProtein, parse_sdf_file
 from datasets.mol_tree import Vocab, MolTree
 from torch_scatter import scatter_sum, scatter_mean
@@ -111,7 +111,7 @@ if __name__ == '__main__':
     data.size_vocab = vocab.size()
     data = transform(data)
 
-    args.result_path = os.path.join(args.result_path, os.path.basename(os.path.dirname(os.path.dirname(path)))
+    args.result_path = os.path.join(args.result_path, os.path.basename(os.path.dirname(os.path.dirname(args.pdb_path))))
     os.makedirs(args.result_path, exist_ok=True)
 
     seed_list = [0, 32, 64,128,256,2003,2015]
