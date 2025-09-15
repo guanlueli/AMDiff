@@ -273,14 +273,14 @@ def get_crossdock_vocab():
     vocab_mol = {}
     cnt = 0
     rot = 0
-    # index_path = '/raid/ligl/data1/data_ge/crossdocked_v1.1_rmsd1.0_pocket10/index.pkl'
-    index_path = '/data/guanlueli/1Data/1Data/data_ge/crossdocked_v1.1_rmsd1.0_pocket10/index.pkl'
+    
+    index_path = '/data/crossdocked_v1.1_rmsd1.0_pocket10/index.pkl'
     with open(index_path, 'rb') as f:
         index = pickle.load(f)
     for i, (pocket_fn, ligand_fn, rmsd_str) in enumerate(tqdm(index)):
         if pocket_fn is None: continue
         try:
-            path = '/data/guanlueli/1Data/1Data/data_ge/crossdocked_v1.1_rmsd1.0_pocket10/' + ligand_fn
+            path = '/data/crossdocked_v1.1_rmsd1.0_pocket10/' + ligand_fn
             mol = Chem.MolFromMolFile(path, sanitize=False)
             moltree = MolTree_process(mol)
             cnt += 1
@@ -304,7 +304,7 @@ def get_crossdock_vocab():
     sorted_data = sorted(data, key=lambda x: x['frequence'], reverse=True)
     vocab_df = pd.DataFrame(sorted_data)
 
-    with open('/data/guanlueli/1Data/1Data/data_ge/vocab_df_crossdock_all.pkl', 'wb') as f:
+    with open('/data/vocab_df_crossdock_all.pkl', 'wb') as f:
         pickle.dump(vocab_df, f)
 
     # for k, v in vocab.items():
