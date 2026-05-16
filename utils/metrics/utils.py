@@ -1,6 +1,3 @@
-import sys
-sys.path.append('/home/ligl/project/DVAE/generation')
-sys.path.append('/home/guanlueli/project/DVAE/generation')
 import os
 from collections import Counter
 import numpy as np

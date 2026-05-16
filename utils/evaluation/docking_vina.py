@@ -17,11 +17,8 @@ from rdkit.Chem.rdForceFieldHelpers import UFFOptimizeMolecule
 from utils.reconstruct import reconstruct_from_generated
 from utils.evaluation.docking_qvina import get_random_id, BaseDockingTask
 
-data_path_base = '/data/guanlueli/1Data/1Data'
-# data_path_base = '/raid/ligl/data1'
-
-pdb2pqr30_path = '/home/guanlueli/miniconda3/envs/generate1/bin/pdb2pqr30'
-# pdb2pqr30_path = '/raid/ligl/miniconda3/envs/generate/bin/pdb2pqr30'
+data_path_base = os.environ.get('AMDIFF_DATA_PATH', './data')
+pdb2pqr30_path = os.environ.get('PDB2PQR30_PATH', 'pdb2pqr30')
 
 def supress_stdout(func):
     def wrapper(*a, **ka):

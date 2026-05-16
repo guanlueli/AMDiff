@@ -1,5 +1,9 @@
 # Molecule Generation For Target Protein Binding with Hierarchical Consistency Diffusion Model
 
+
+![Overview](fig/overview1.png)
+
+
 This repository is the official implementation of Molecule Generation For Target Protein Binding with Hierarchical Consistency Diffusion Model. The importance of molecular generation in drug discovery cannot be overstated, as it is pivotal for identifying novel therapeutic agents. Molecular structures can be deconstructed into multiple levels of resolution, each offering unique advantages and interaction mechanisms within the binding pocket. To fully harness the potential of molecular generation, **we propose AMDiff, a classifier-free hierarchical diffusion model specifically designed for accurate and interpretable *de novo* ligand design through atom-motif consistency.**
 
 
@@ -45,23 +49,23 @@ The experiments were conducted on a computing cluster with NVIDIA RTX 4090 GPUs,
 To generate predictions for proteins in the test set, run "sample_amc_diff.py":
 
 ```
-python evaluation/sample_amc_diff.py
+python sample_amc_diff.py
 ```
 
 To generate predictions for pdb file, run "sample_for_pdb.py":
 
 ```
-python evaluation/sample_for_pdb.py
+python sample_for_pdb.py
 ```
 
 # Evaluation
 
-To evaluation the sampling results, set "evaluate_amc_diff.py" and evaluate_for_pdb.py as file to run.
+To evaluate the sampling results, run "evaluate_amc_diff.py" and "evaluate_for_pdb.py":
 
 ```
-python evaluation/evaluate_amc_diff.py
+python evaluate_amc_diff.py
 
-python evaluation/evaluate_for_pdb.py
+python evaluate_for_pdb.py
 ```
 # Generated Molecules of AMDiff
 

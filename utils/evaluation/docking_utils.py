@@ -326,7 +326,7 @@ def get_result(docked_sdf, ref_mol=None):
 if __name__ == 'main':
     import glob
 
-    gen_file = '/home/haotian/molecules_confs/Protein_test/Pocket2Mol-main/outputs'
+    gen_file = os.environ.get('AMDIFF_GEN_DIR', './outputs')
     samples = glob.glob(gen_file + '/*')
     i = 0
     work_dir = osp.join(samples[i], 'SDF')

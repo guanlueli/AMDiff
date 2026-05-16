@@ -1,9 +1,6 @@
 import pandas as pd
 import os
 import pickle
-import sys
-sys.path.append('/home/ligl/project/DVAE/generation1')
-sys.path.append('/home/guanlueli/project/DVAE/generation1')
 
 from rdkit.RDLogger import logger
 logger = logger()
